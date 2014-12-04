@@ -1,0 +1,80 @@
+// mdc.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+
+
+using namespace std;
+
+int MDC(int a, int b){
+int resto;
+
+while(b != 0){
+resto = a % b;
+a = b;
+b = resto;
+}
+
+return a;
+}
+
+int main(int argc, char *argv[]){
+int x, y;
+
+cout << "Este programa permite calcular MDC\n";
+cout << "Ingrese el primer valor: ";
+cin >> x;
+cout << "Ingrese el segundo valor: ";
+cin >> y;
+
+cout << "\El Máximo Divisor Comum de "
+<< x << " es " << y << " es " << MDC(x, y) << endl;
+
+system("PAUSE");
+return EXIT_SUCCESS;
+}
+
+
+
+
+
+
+
+
+// mcm.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+
+
+using namespace std;
+
+int main(int argc, char* argv[])
+{ int a, b, x, z, y=1, i=2; 
+cout<<"ingrese primer numero: \n"; 
+cin>>a; cout<<"ingrese segundo numero: \n"; 
+cin>>b; 
+if (a<b)
+{x=a; z=b;
+} 
+else 
+{x=b; z=a;
+} 
+do{ 
+if (x%i==0)
+{ if(z%i==0)
+{ y=y*i; x=x/i; z=z/i; i=2; 
+}
+else i++; 
+} else i++; 
+} while(i<=x); 
+y=y*z*x; 
+cout<<"el MCM es "<<y<<"\n"; 
+getch(); 
+getch(); 
+return 0; 
+}
