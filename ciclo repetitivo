@@ -1,0 +1,21 @@
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+using namespace std;
+void main ()
+{
+int I,N;
+cout<< "Ingrese N: ";
+cin>>N;
+for (I=2;I<=N;I=I+2)
+cout<<I<<"\t";
+I=2;
+cout<<"\n";
+while (I<=N)
+{
+cout<<I<<"\t";I=I+2;
+
+}
+getch ();
+
+}
