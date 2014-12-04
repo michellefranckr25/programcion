@@ -1,0 +1,42 @@
+// vector.h
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+
+
+#define TAM 100
+using namespace std;
+void leer_vector(int vec[], int n);
+void mostrar_vector(int vec[],int n);
+
+void main ()
+
+{ int v[TAM],m;
+do
+{cout<<"ingrese numero de elementos:";
+cin>>m;
+}
+while((m>TAM)|| (m<=0));
+leer_vector(v,m);
+mostrar_vector (v,m);
+getch();
+}
+void leer_vector(int vec[],int n)
+{
+	for (int i=0; i<n; i++)
+	{
+		cout<<"["<<i<<"]";
+		cin>>vec[i];
+	}
+}
+
+ void mostrar_vector(int vec[],int n)
+ {
+	 for (int i=0; i<n;i++)
+	 {
+		cout<<"["<<i<<"]=";
+		cout<<vec[i]<<"\n";
+	 }
+ }
