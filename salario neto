@@ -1,0 +1,24 @@
+// salario neto 1.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include <iostream>
+using namespace std;
+float calcular_salario_neto(float salario,float porcentafp,float porcentiva);
+void main()
+{float salarioN,salarioB,afp,iva;
+cout<<"Ingrese salario Bruto: ";
+cin>>salarioB;
+afp=0.12;
+iva=0.13;
+salarioN=calcular_salario_neto(salarioB,afp,iva);
+cout<<"El salario Neto es: "<<salarioN;
+getch();
+}
+float calcular_salario_neto(float salario,float porcentafp,float porcentiva)
+{
+float salarioN;
+salarioN=salario-((porcentafp+porcentiva)*salario);
+return salarioN;
+}
