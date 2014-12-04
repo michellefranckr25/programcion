@@ -1,0 +1,27 @@
+// tarea.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+using namespace std;
+void main()
+{
+	float n,x,s,i,j,p;
+    cout<<"ingrese valor n:";
+    cin>>n;
+    cout<<"ingrese valor x:";
+    cin>>x;
+
+	s=5;
+	for(i=2;i<=n;i=i+2)
+	{
+		p=1;
+    	for(j=1;j<=i;j++)
+		p=p*j;
+	s=(s+pow(x,i))/p;
+	}
+	cout<<"la suma es:"<<s;
+	getch();
+}
