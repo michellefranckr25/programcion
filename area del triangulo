@@ -1,0 +1,22 @@
+HolaMundo
+// HolaMundo.cpp : Defines the entry point for the console application.
+//Autor:Alejandra Sanchez
+//Fecha:06/09/2013
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+int main ()
+{
+cout<<"ingresar valor de los lados";
+int B,H,A;
+cout<<"ingrese B";
+cin>>B;
+cout<<"ingrese H";
+cin>>H;
+A=B*H/2;
+cout <<"ELA AREA ES IGUAL A";
+cout<<A;
+getch ();
+return 0;
+}
