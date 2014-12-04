@@ -1,0 +1,26 @@
+// decimal a cualquier base.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "conio.h"
+#include "math.h"
+#include <iostream>
+using namespace std;
+void main ()
+{int numero,r,residuo,suma=0;
+float exp=0;
+cout<<"Ingrese un numero: ";
+cin>>numero;
+cout<<"Ingrese la base a convertir: ";
+cin>>r;
+while(numero!=0)
+{
+residuo=numero%r;
+numero=numero/r;
+suma=suma+residuo*pow(10,exp);
+exp++;
+}
+cout<<"El numero es; ";
+cout<<suma;
+getch();
+}
