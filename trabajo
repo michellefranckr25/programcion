@@ -1,0 +1,56 @@
+// trabajo.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+#include "stdlib.h"
+
+using namespace std;
+
+float areaTr (float b, float h);
+float areaCirc (float r);
+int serie (int N);
+
+void main()
+
+{int opcion;
+  do
+  {
+	  cout<<"1.-calculo del area del triangulo";
+	  cout<<"2.-calculo del area de la circunferencia";
+	  cout<<"3.-calculo de la serie";
+	  cout<<"4.-salir";
+	  cout<<"ingrese la opcion";
+	  cin>>opcion;
+
+	  switch (opcion)
+	  {
+	  case 1:
+		  cout<<"ingrese base";
+		  cin>>b;
+		  cout<<"ingrese altura";
+		  cin>>h;
+		  cout<<"el area del triangulo es:";
+		  cout<<areaTr(b,h); // Se puede mostrar el resultado directamente
+		  break;
+	  case 2:
+		  cout<<"ingrese radio";
+		  cin>>r;
+		  cout<<"el area del triangulo es:";
+		  cout<<areaCirc(r);
+		  break;
+      case 3:
+		  cout<<"ingrese N";
+		  cin>>N;
+		  cout<<"la suma es:";
+		  cout<<suma(N);
+		  break;
+	  case 4:
+		  cout<<"salir";
+		  break;
+	  default:cout<<"error";
+	  }
+	   getch();
+	   system("cls");
